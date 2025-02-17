@@ -26,7 +26,7 @@
              with font-awesome or any other icon font library -->
 
         <li class="nav-item">
-          <a href="{{ route('dashboard') }}" class="nav-link">
+          <a href="{{ route('dashboard') }}" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>Dashboard</p>
           </a>
@@ -34,7 +34,7 @@
 
         <li class="nav-header">EXAMPLES</li>
         <li class="nav-item">
-          <a href="{{--  --}}" class="nav-link">
+          <a href="{{--  --}}" class="nav-link ">
             <i class="nav-icon far fa-calendar-alt"></i>
             <p>user
               <span class="badge badge-info right">2</span>
