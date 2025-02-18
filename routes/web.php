@@ -8,11 +8,6 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-// Route::get('/name/{name}', function ($name) {
-//     return 'name : '. $name;
-// });
-
-
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Auth::routes();
