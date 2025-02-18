@@ -1,3 +1,7 @@
+<?php
+// use App\Models\CmsHelper as cms;
+?>
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="" class="brand-link">
@@ -26,23 +30,38 @@
              with font-awesome or any other icon font library -->
 
         <li class="nav-item">
-          <a href="" class="nav-link">
+          <a href="{{ route('dashboard') }}" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>
-              Dashboard
-            </p>
+            <p>Dashboard</p>
           </a>
         </li>
 
-        <li class="nav-header">EXAMPLES</li>
+
+        <li class="nav-header">Workshop</li>
         <li class="nav-item">
-          <a href="{{ route('dashboard') }}" class="nav-link">
+          <a href="{{--  --}}" class="nav-link {{--  --}} ">
             <i class="nav-icon far fa-calendar-alt"></i>
-            <p>Calendar
-              <span class="badge badge-info right">2</span>
-            </p>
+            <p>จองห้องประชุม</p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="{{--  --}}" class="nav-link {{--  --}} ">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p>ปฏิทินกิจกรรม</p>
+          </a>
+        </li>
+
+        {{-- @if (auth::user()->role == 'admin') --}}
+          <li class="nav-header">Management</li>
+          <li class="nav-item">
+            <a href="{{ route('users') }}" class="nav-link {{ Request::is('users') ? 'active' : '' }} ">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>user
+                <span class="badge badge-info right">{{--  --}}</span>
+              </p>
+            </a>
+          </li>
+        {{-- @endif --}}
 
 
         {{-- <li class="nav-item">
