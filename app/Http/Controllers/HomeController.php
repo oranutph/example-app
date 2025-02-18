@@ -86,6 +86,7 @@ class HomeController extends Controller
         // dd($request->id);
         $user = User::find($request->id);
         // dd($user->toArray());
+        
         return view('users_edit', compact('user'));
     }
 
