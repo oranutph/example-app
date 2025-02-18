@@ -135,7 +135,8 @@
         <li class="user-header bg-primary">
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
           <p>
-            {{ auth::user()->name ?? 'Laravel' }} <br>Web Developer
+            {{ auth::user()->name ?? 'Laravel' }} <br>
+            {{ auth::user()->role ?? '' }}
             <small>{{ auth::user()->created_at ?? '' }}</small>
           </p>
         </li>
